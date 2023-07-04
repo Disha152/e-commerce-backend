@@ -23,6 +23,20 @@ mongoose.connect("mongodb+srv://disha29082001:project@clusternew.llrdeqz.mongodb
 const UserRoutes= require('./routes/user_routes');
 app.use("/api/user",UserRoutes);
 
+const CategoryRoutes = require('./routes/category_routes');
+app.use("/api/category",CategoryRoutes);
+
+const productRoutes = require('./routes/product_routes');
+app.use("/api/product",productRoutes);
+
+const cartRoutes = require('./routes/cart_routes');
+app.use("/api/cart",cartRoutes);
+
+const orderRoutes = require('./routes/order_routes');
+app.use("/api/order",orderRoutes);
+
 app.listen(port , ()=>{
   console.log(`Server is running on port ${port}`);
 })
+
+
