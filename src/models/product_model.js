@@ -6,7 +6,7 @@ const productSchema = new Schema ({
   description: {type: String , default: ""},
   price :{ type: Number,required:[ true,"price field can't be empty"] },
   category: {type: Schema.Types.ObjectId, ref: 'Category',required: true},
-  images: {type: Array , default: []},
+  images: {type:String , default: ""},
   
 });
 

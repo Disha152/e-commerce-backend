@@ -6,6 +6,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const uuid = require('uuid');
 
+
 // const UserRoutes = require('./routes/user_routes');
 
 const app = express();
@@ -18,7 +19,12 @@ app.use(cors());
 
 const port = process.env.PORT || 8755;
 
-mongoose.connect("mongodb+srv://disha29082001:project@clusternew.llrdeqz.mongodb.net/Ecommerce?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://disha29082001:game@cluster0.wdk8drm.mongodb.net/Sample?retryWrites=true&w=majority",{
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+ 
+
+});
 
 const UserRoutes= require('./routes/user_routes');
 app.use("/api/user",UserRoutes);
